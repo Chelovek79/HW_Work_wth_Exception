@@ -12,7 +12,7 @@ public class Bus<T extends DriverD> extends Transport implements Competing {
         Average(25, 50),
         Large(50, 80),
         EspeciallyLarge(80, 120),
-        NULL (0,0);
+        NULL(0, 0);
 
         final int from;
         final int to;
@@ -64,8 +64,13 @@ public class Bus<T extends DriverD> extends Transport implements Competing {
     }
 
     @Override
-    public String printType () {
-            return getBrand() + " " + getModel() + ". " + numberOfSeats;
+    public String printType() {
+        return getBrand() + " " + getModel() + ". " + numberOfSeats;
+    }
+
+    @Override
+    public String passDiagnostics() {
+        return null;
     }
 
     @Override

@@ -1,3 +1,4 @@
+import check.TransportTypeException;
 import drivers.DbDrivers;
 import transport.DbTransport;
 import transport.Transport;
@@ -24,6 +25,15 @@ public class Main {
         transport.printType(2, "B");
         transport.printType(0, "C");
         transport.printType(3, "D");
+        System.out.println(" ");
 
+        try {
+            transport.testingAvto(0, "B");
+            transport.testingAvto(1, "C");
+            transport.testingAvto(3, "D");
+        } catch (TransportTypeException e) {
+            System.err.println(e + "\n");
+        }
+        System.out.println("Как-то так... продолжаем...");
     }
 }

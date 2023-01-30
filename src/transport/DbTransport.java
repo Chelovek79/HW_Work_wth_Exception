@@ -1,5 +1,6 @@
 package transport;
 
+import check.TransportTypeException;
 import drivers.DbDrivers;
 
 public class DbTransport {
@@ -54,6 +55,19 @@ public class DbTransport {
                 break;
             case "D":
                 System.out.println(buses[i].printType());
+        }
+    }
+
+    public void testingAvto(int i, String classCar) throws TransportTypeException {
+        switch (classCar) {
+            case "B":
+                System.out.println(smallcar[i].passDiagnostics());
+                break;
+            case "C":
+                System.out.println(trucks[i].passDiagnostics());
+                break;
+            case "D":
+                throw new TransportTypeException("'Автобусы' диагностику не проходят...");
         }
 
     }

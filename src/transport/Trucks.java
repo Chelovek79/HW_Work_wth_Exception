@@ -79,6 +79,11 @@ public class Trucks<T extends DriverC> extends Transport implements Competing {
     }
 
     @Override
+    public String passDiagnostics() {
+        return getBrand() + " " + getModel() + " диагностику прошёл.";
+    }
+
+    @Override
     public String toString() {
         return super.toString() + ". Объём двигателя " + engineVolume + " " + driver;
     }
