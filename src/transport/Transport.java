@@ -30,6 +30,8 @@ public abstract class Transport {
 
     public abstract String printType();
 
+    public abstract String passDiagnostics ();
+
     @Override
     public String toString() {
         return brand + " " + model;
